@@ -1,5 +1,5 @@
 ========================
-StableMotifs.jar README
+README
 ========================
 ------------
 I)	THE METHOD
@@ -7,13 +7,13 @@ I)	THE METHOD
 
 The method implemented in this Java library is the Stable Motif Control Algorithm, which is described in the following article: 
 
-Jorge G. T. ZaÒudo and RÈka Albert (2015).
+Jorge G. T. Za√±udo and R√©ka Albert (2015).
 Cell fate reprogramming by control of intracellular network dynamics.
 PLoS Comput Biol 11(4): e1004193.
 
 This algorithm is based on the concept of stable motifs and its related algorithm to find the attractors of a logical model, which is described in the following article: 
 
-Jorge G. T. ZaÒudo and RÈka Albert (2013).
+Jorge G. T. Za√±udo and R√©ka Albert (2013).
 An effective network reduction approach to find the dynamical repertoire of discrete dynamic networks. 
 Chaos 23 (2), 025111. Focus Issue: Quantitative Approaches to Genetic Networks.
 
@@ -52,7 +52,7 @@ For the node n*ames use only alphanumeric characters (A-Z,a-z), numbers (0-9) an
 
 BOOLEAN FUNCTIONS
 
-For the Boolean functions use only the node names, the logical operators "and", "or", "not", and the parentheses symbols ")" and "(". In case the Boolean function is constant, use "0" or "1", depending on the constant state of the function. The logical function does not need to be written in a disjunctive normal form; the program will take the logical form in the TXT file and transform it into its disjunctive normal form using the QuineñMcCluskey algorithm.
+For the Boolean functions use only the node names, the logical operators "and", "or", "not", and the parentheses symbols ")" and "(". In case the Boolean function is constant, use "0" or "1", depending on the constant state of the function. The logical function does not need to be written in a disjunctive normal form; the program will take the logical form in the TXT file and transform it into its disjunctive normal form using the Quine‚ÄìMcCluskey algorithm.
 
 ------------
 III)	OUTPUT
@@ -60,12 +60,12 @@ III)	OUTPUT
 
 The program will produce the following:
 
-ï	2 tab separated TXT files with the quasi-attractors.
-ï	A folder with the reduced networks for the first tab separated TXT file.
-ï	A folder with the reduced networks for the second tab separated TXT file.
-ï	A tab separated TXT file with the stable motifs found during network reduction.
-ï	2 tab separated TXT file with the sequences of stable motifs composing the stable motif succession diagram, and each transition in the diagram.
-ï   A TXT file with the stable motif control sets.
+‚Ä¢	2 tab separated TXT files with the quasi-attractors.
+‚Ä¢	A folder with the reduced networks for the first tab separated TXT file.
+‚Ä¢	A folder with the reduced networks for the second tab separated TXT file.
+‚Ä¢	A tab separated TXT file with the stable motifs found during network reduction.
+‚Ä¢	2 tab separated TXT file with the sequences of stable motifs composing the stable motif succession diagram, and each transition in the diagram.
+‚Ä¢   A TXT file with the stable motif control sets.
 
 The names of these files and folder will depend on the the name if the input TXT file. For example, for an input TXT file named "RulesFile.txt", the two tab separated output files with the quasi-attractors will be "RulesFile-QuasiAttractors.txt" and "RulesFile-PutativeQuasiAttractors.txt". For the case of the folders with the reduced networks, the folder names will be "QA-RulesFile" and "PQA-RulesFile", respectively. The TXT file with the stable motifs will be named "RulesFile-StableMotifs.txt". Finally, the TXT file with the sequences of stable motifs, the transitions of the succession diagram, and the stable motif control sets will be named "RulesFile-DiagramSequencesAttractors.txt", "Diagram-RulesFileModified.txt", and "RulesFile-StableMotifControlSets.txt", respectively.
 
@@ -129,7 +129,7 @@ V)	SOFTWARE USED AND LICENSES
 
 JohnsonCycleAlgorithm
 
-A modified version of the Java implementation ìJohnsonCycleAlgorithmî by Frank Meyer (http://www.normalisiert.de/) is used to search for cycles in the network. The code for the Java implementation is available under the BSD-2 license.
+A modified version of the Java implementation ‚ÄúJohnsonCycleAlgorithm‚Äù by Frank Meyer (http://www.normalisiert.de/) is used to search for cycles in the network. The code for the Java implementation is available under the BSD-2 license.
 
 JGraphT
 
@@ -137,7 +137,7 @@ Several functions from the JGraphT java class library by Barak Naveh and Contrib
 
 Quine-McCluskey_algorithm
 
-An implementation of the Quine-McCluskey_algorithm in the ìTerm.javaî and ìFormula.javaî classes were retrieved in 2013 from http://en.literateprograms.org/Quine-McCluskey_algorithm_(Java)?action=history&offset=20110925122251. The ìTerm.javaî and ìFormula.javaî classes are available under the MIT License.
+An implementation of the Quine-McCluskey_algorithm in the ‚ÄúTerm.java‚Äù and ‚ÄúFormula.java‚Äù classes were retrieved in 2013 from http://en.literateprograms.org/Quine-McCluskey_algorithm_(Java)?action=history&offset=20110925122251. The ‚ÄúTerm.java‚Äù and ‚ÄúFormula.java‚Äù classes are available under the MIT License.
 
 ------------
 VI)	COPYRIGHT
@@ -145,7 +145,7 @@ VI)	COPYRIGHT
 
 The MIT License (MIT)
 
-Copyright (c) 2013-2015 Jorge G. T. ZaÒudo and RÈka Albert.
+Copyright (c) 2013-2015 Jorge G. T. Za√±udo and R√©ka Albert.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
