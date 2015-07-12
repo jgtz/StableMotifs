@@ -503,8 +503,10 @@ public class OtherMethods {
         while(fr1.hasNext()){
             line=fr1.nextLine();
             line=line.replace("(OscillatingMotif)", "").replace("  ", " ");
-            for(int i=0;i<attractorsToMerge[0].length;i++){
-                line=line.replace(attractorsToMerge[0][i], attractorsToMerge[1][i]);
+            if(attractorsToMerge.length>0){
+                for(int i=0;i<attractorsToMerge[0].length;i++){
+                    line=line.replace(attractorsToMerge[0][i], attractorsToMerge[1][i]);
+                }
             }
             for(String motif : motifsToRemove){
                  line=line.replace(motif, "").replace("  ", " ");
