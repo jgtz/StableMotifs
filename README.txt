@@ -65,7 +65,7 @@ The program will produce the following:
 •	A folder with the reduced networks for the second tab separated TXT file.
 •	A tab separated TXT file with the stable motifs found during network reduction.
 •	2 tab separated TXT file with the sequences of stable motifs composing the stable motif succession diagram, and each transition in the diagram.
-•  A TXT file with the stable motif control sets.
+• A TXT file with the stable motif control sets.
 
 The names of these files and folder will depend on the the name if the input TXT file. For example, for an input TXT file named "RulesFile.txt", the two tab separated output files with the quasi-attractors will be "RulesFile-QuasiAttractors.txt" and "RulesFile-PutativeQuasiAttractors.txt". For the case of the folders with the reduced networks, the folder names will be "QA-RulesFile" and "PQA-RulesFile", respectively. The TXT file with the stable motifs will be named "RulesFile-StableMotifs.txt". Finally, the TXT file with the sequences of stable motifs, the transitions of the succession diagram, and the stable motif control sets will be named "RulesFile-DiagramSequencesAttractors.txt", "Diagram-RulesFileModified.txt", and "RulesFile-StableMotifControlSets.txt", respectively.
 
