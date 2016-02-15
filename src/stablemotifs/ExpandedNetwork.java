@@ -1372,7 +1372,7 @@ public class ExpandedNetwork {
         
         return result;
     }
-    
+            
     
     public boolean coherentComposite(ArrayList<String> cycle){
         boolean coherentComposite=true;
@@ -1516,9 +1516,9 @@ public class ExpandedNetwork {
                 }
             }
             if(!completableComposite(compositeNodes.get(i),cycle)){
-                for(int j=0;j<cyclesSimplified.size();j++){
+                for(int j=0;j<cyclesSimplified.size();j++){                   
                     if(cyclesSimplified.get(j).contains(compositeNodes.get(i))){
-                        cyclesSimplified.remove(cyclesSimplified.get(j));
+                        cyclesDummy.remove(cyclesSimplified.get(j));
                     }
                 }
             }
@@ -1526,8 +1526,8 @@ public class ExpandedNetwork {
 
         
         
-        cyclesDummy=new ArrayList<ArrayList<String>>();     
-        for(int i=0;i<cyclesSimplified.size();i++){cyclesDummy.add(cyclesSimplified.get(i));}
+        cyclesSimplified=new ArrayList<ArrayList<String>>();     
+        for(int i=0;i<cyclesDummy.size();i++){cyclesSimplified.add(cyclesDummy.get(i));}
         cycleDictionary=new HashMap<Integer,ArrayList<String>>();
         for(int i=0;i<cyclesSimplified.size();i++){cycleDictionary.put(i, cyclesSimplified.get(i));}
         //Uncomment to output the cycle numbers and the nodes they contain
@@ -1605,7 +1605,7 @@ public class ExpandedNetwork {
                             //Here we will have all the new cycles that are formed by taking the union of one cycle containing regulator j (but not j+1)
                             //with all cycle containing regulator j+1 (but not regulator j). The idea is that we want to substitute in all arrays
                             //the new cycles formed with the original one, which we will remove.
-                            if(compositeCyclesSet.get(j).isEmpty()&&compositeCyclesSet.get(j+1).isEmpty()){boolDummy2=false;break;}
+                            if(compositeCyclesSet.get(j).isEmpty()||compositeCyclesSet.get(j+1).isEmpty()){boolDummy2=false;break;}
                                 SetNext=new HashSet<Integer>(compositeCyclesSet.get(j+1));
                                 //Here we will have the cycle numbers of the the cycle that only contain regulator j+1 (but
                                 //not regulator j)
@@ -1684,7 +1684,7 @@ public class ExpandedNetwork {
                                                                 //We add this because we do not want to remove the cycles with
                                                                 //that have both inputs j and j+1 because they may be needed
                                                                 //in their precombined form later on
-                                                                cyclePairs.get(index2).add((Integer) index2);
+                                                                cyclePairs.get(index2).add((Integer) index2);                                                               
                                                                 //Uncomment to output new cycles
                                                                 //System.out.print("Cycle Inters "+dictionarySize+" \n");
                                                                 //for(int j1=0;j1<dummyArrayList.size();j1++){
@@ -1713,7 +1713,7 @@ public class ExpandedNetwork {
                                             //with the cycle numbers per composite node have the precombined
                                             //cycle number. If they do, it puts the combined cycles instead
                                             if(compositeCyclesSet.get(k).contains((Integer) index)){
-                                                compositeCyclesSet.get(k).remove((Integer) index);
+                                                if(!SetNextIntersection.contains((Integer) index)){compositeCyclesSet.get(k).remove((Integer) index);}
                                                 for(int k1=0;k1<cyclePairs.get(index).size();k1++){
                                                     index2=cyclePairs.get(index).get(k1);
                                                     compositeCyclesSet.get(k).add((Integer) index2);
@@ -1737,9 +1737,9 @@ public class ExpandedNetwork {
 
                                     }
                                 }
+                                    
+                                }
                                 
-                        }
-                        
                         
                         checkedComposites.remove(compositeNodes.get(i));
                         checkedComposites.put(compositeNodes.get(i), false);
@@ -1833,7 +1833,7 @@ public class ExpandedNetwork {
 //           }
 //           System.out.print("\n");
 //        }
-    }
+           }
 
     
     public void findStableStronglyConnectedComponets(int maxCycleSize, int maxMotifSize){
@@ -2623,7 +2623,7 @@ public class ExpandedNetwork {
            //System.out.print("\n");
         //}
     }
-   
+     
     
     
     public boolean getStableStronglyConnectedComponents(){
