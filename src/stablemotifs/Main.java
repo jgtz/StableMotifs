@@ -2,6 +2,7 @@ package stablemotifs;
 
 import fileOperations.DeleteFile;
 import java.util.ArrayList;
+import java.util.Arrays;
 import javax.script.ScriptException;
 
 
