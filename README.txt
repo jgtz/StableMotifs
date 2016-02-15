@@ -1,4 +1,4 @@
-========================
+﻿========================
 README
 ========================
 ------------
@@ -109,7 +109,7 @@ Network reduction complete.
 Removing duplicate quasi-attractors.
 Total number of quasi-attractors: 3
 Number of putative quasi-attractors: 0
-Total time for finding quasi-attractors: 491.614286881 s
+Total time for finding quasi-attractors: 212.713955303 s
 Writing TXT files with quasi-attractors and stable motifs.
 Starting analyis of stable motif succession diagram.
 Identifying quasi-attractors corresponding to stable motif sequences.
@@ -117,7 +117,7 @@ Shortening stable motif sequences.
 Finding control sets for each stable motif...
 Creating control sets for each stable motif sequence.
 Removing duplicates control sets.
-Total time for finding stable motif control sets: 107.642959744 s
+Total time for finding stable motif control sets: 54.818246606 s
 Writing TXT files with stable motif control sets.
 Done!
 
