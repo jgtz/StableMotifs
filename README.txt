@@ -48,7 +48,7 @@ where "mcl" would be a number corresponding to the maximum cycle length, and "ms
 
 NODE NAMES
 
-For the node n*ames use only alphanumeric characters (A-Z,a-z), numbers (0-9) and "_". The reserved words for the program, which shouldn't be used for node names, are: "True", "False", "true", "false", "0", "1", "and", "or", and "not".
+For the node names use only alphanumeric characters (A-Z,a-z), numbers (0-9) and "_". The reserved words for the program, which shouldn't be used for node names, are: "True", "False", "true", "false", "0", "1", "and", "or", and "not".
 
 BOOLEAN FUNCTIONS
 
@@ -74,6 +74,12 @@ Each of the TXT files with the quasi-attractors contains one line with the node 
 The quasi-attractors in the file ending with "QuasiAttractors.txt" will have at least one corresponding attractor in the asynchronous Boolean network that has the same stabilized states as the quasi-attractor. For example, if Node1=0, Node2=1 and Node3=X in a quasi-attractor, then there will be at least an attractor with Node1=0 and Node2=1, while Node3 could oscillate or take the state 0 or 1 (in most cases Node3 will oscillate; for more details see the article referenced in the "THE METHOD" section).
 
 The quasi-attractors in the file ending with "PutativeQuasiAttractors.txt" may or may not have a corresponding attractor in the asynchronous Boolean network. As explained in more detail in the article referenced in the "THE METHOD" section, these quasi-attractors need to be considered to make sure the method finds all attractors. These quasi-attractors arise because a group of nodes in a strongly connected component may be able display both oscillatory and fixed state behavior in the attractors. Our results with random Boolean networks suggest that in only about 2% of the networks will one or more of the putative quasi-attractors correspond to an attractor of the asynchronous Boolean network. It is worth noting that these putative quasi-attractors are an artifact of the asynchronous updating scheme being Markovian (i.e. having no memory).
+
+The stable motifs are in the file ending with "StableMotifs.txt". Each row is a stable motif and each tab-separed column is the state of the node in the stable motif (a stable motif is a set of nodes and their corresponding states which are such that the nodes form a minimal strongly connected component and their states form a partial fixed point of the Boolean model). All stable motifs obtained while finding the quasi-attractors are included in this file, which means that some of the motif are dependent on other stable motifs. In other words, some stable motifs included in the file might require other stable motifs to stabilize before they display the partial fixed point property of a stable motif. 
+
+The stable motif control sets in the file ending with "StableMotifControlSets.txt". Each row denotes a control set towards a specific attractor (a control set is a set of node states that, when fixed, guarantee that any initial condition of the system will evolve towards an attractor). Each tab-separed column of a row, except for the last column, denotes the state of the node in the control set. The last tab-separed column of each row denotes the target attractor "AttractorX" of the control set, where the "X" is the column of the attractor in the file ending with "QuasiAttractors.txt".
+
+As a note of caution, the stable motifs, control sets, and atttractors are obtained given a network, Boolean functions, and source node states. If any of them are changed then the system is changed, so it is possible that this changes the stable motifs, control sets, and atttractors. If the system is changed then one needs to recalculate the stable motifs, control sets, and atttractors for the modified system.
 
 ------------
 IV)	EXAMPLE
@@ -122,6 +128,10 @@ Writing TXT files with stable motif control sets.
 Done!
 
 For this case there are no putative quasi-attractors. 3 of the 5 quasi-attractors correspond to the apoptosis attractor (Apoptosis=1). The remaining 2 quasi-attractors correspond to the T-LGL leukemia attractor (with either P2=0 or P2=1).
+
+Looking at the stable motifs we find 7 stable motifs. The motif (PDGFR=0, S1P=0, SPHK1=0) is uniquely associated to the apoptosis attractor, and the (Ceramide=0, PDGFR=1, S1P=1, SPHK1=1) is uniquely associated to the leukemia attractor. The stable motif (ERK=1, GRB2=1, IL2RB=1, IL2RBT=1, MEK=1, PI3K=1, RAS=1) is dependent on the (TBET=1) motif, and only appears after the latter has stabilized.
+
+Inspecting the stable motif control sets, we find 15 control sets to the three different attractors (Attractor0 denotes the apoptosis attractor, and  Attractor1/2 denote the leukemia attractors). The control set (PDGFR=0, Attractor0) implies that fixing PDGFR to the state 0 guarantees the system will converge to the apoptosis attractor. The same is true for the (S1P=0, Attractor0) and (SPHK1=0, Attractor0) control sets. These three control sets are obtained from the motif (PDGFR=0, S1P=0, SPHK1=0), which is uniquely associated to the apoptosis attractor. In a similar fashion, the control sets for the leukemic attractors (Attractor1 or Attractor2) are obtained from the motif Ceramide=0, PDGFR=1, S1P=1, SPHK1=1) associated to the leukemic attractor.
 
 ------------
 V)	SOFTWARE USED AND LICENSES

@@ -1,0 +1,68 @@
+  (  STAT5_2  )  or  (  Proliferation  ) 
+  (  IL4R_2  )  or  (  IL2R_2  ) 
+ 1
+  (  IRF1  ) 
+ 0
+ 1
+  (  IL2RA and IL2RB and IL2_e and CGC  )  or  (  IL2RA and IL2RB and CGC and IL2  ) 
+ 0
+ 1
+ 1
+ 0
+ 0
+ 0
+ 0
+ 0
+  (  IL4 and IL4RA and CGC  )  or  (  IL4RA and CGC and IL4_e  ) 
+ 0
+ 1
+ 1
+ 1
+ 1
+ 1
+  (  SMAD3 and NFAT  )  or  (  STAT5_2 and NFAT  )  or  (  STAT5 and NFAT  )  or  (  NFKB and NFAT  )  or  (  FOXP3 and NFAT  ) 
+  (  IL12RB1 and IL12_e and IL12RB2  ) 
+  (  IL27R  )  or  (  IL23R  )  or  (  IL10R  )  or  (  IL21R  )  or  (  IL6R  ) 
+  (  IL27R  )  or  (  IFNBR  )  or  (  IFNGR  ) 
+  (  TGFBR  ) 
+  (  IL4R  )  or  (  IL4R_2  ) 
+  (  IL2R and ~IL4R_2 and ~IL2R_2  )  or  (  IL4R and ~IL4R_2 and ~IL2R_2  )  or  (  IL15R and ~IL4R_2 and ~IL2R_2  ) 
+  (  IFNG and IFNGR1 and IFNGR2  )  or  (  IFNGR1 and IFNGR2 and IFNG_e  ) 
+  (  IL12R and ~GATA3  ) 
+  (  IL21 and GP130 and CGC  )  or  (  IL21_e and GP130 and CGC  ) 
+  (  STAT6 and ~TBET  )  or  (  ~TBET and GATA3  ) 
+  (  TGFBR and STAT3  )  or  (  TGFBR and RORGT  )  or  (  STAT3 and RORGT  ) 
+ 1
+  (  STAT5_2  ) 
+ 1
+  (  IFNB_e  ) 
+ 0
+ 1
+  (  IL10 and IL10RB and IL10RA  )  or  (  IL10RB and IL10RA and IL10_e  ) 
+ 0
+  (  TBET  ) 
+  (  STAT5_2 and SMAD3 and ~STAT1 and ~RORGT and NFAT  )  or  (  STAT5_2 and SMAD3 and ~STAT1 and ~STAT3 and NFAT  )  or  (  SMAD3 and ~STAT1 and STAT5 and ~RORGT and NFAT  )  or  (  SMAD3 and ~STAT1 and ~STAT3 and STAT5 and NFAT  )  or  (  STAT5_2 and FOXP3 and NFAT  )  or  (  STAT5 and FOXP3 and NFAT  ) 
+  (  IL15RA and IL2RB and IL15_e and CGC  ) 
+  (  IL23_e and STAT3 and GP130 and RORGT  )  or  (  IL23 and STAT3 and GP130 and RORGT  ) 
+  (  TGFB_e  )  or  (  TGFB  ) 
+  (  IL27_e and GP130 and IL27RA  ) 
+  (  APC  ) 
+  (  ~IL2RA and IL2RB and IL2_e and CGC  )  or  (  ~IL2RA and IL2RB and CGC and IL2  ) 
+  (  TCR and CD28  ) 
+  (  Proliferation and FOXP3 and NFAT  ) 
+  (  STAT1 and ~GATA3  )  or  (  TBET and ~GATA3  ) 
+  (  STAT1  ) 
+  (  ~STAT3 and TBET and Proliferation and ~FOXP3 and RUNX3 and NFAT  )  or  (  ~STAT3 and STAT4 and Proliferation and ~FOXP3 and NFAT  ) 
+  (  ~STAT5_2 and ~STAT1 and STAT3 and ~STAT5 and RORGT and ~STAT6 and Proliferation and NFKB and ~FOXP3 and NFAT  ) 
+  (  ~IKB and ~FOXP3  ) 
+  (  IL4 and ~IL4RA and CGC  )  or  (  ~IL4RA and CGC and IL4_e  ) 
+  (  STAT3 and Proliferation and NFAT  )  or  (  GATA3 and Proliferation and NFAT  ) 
+  (  IL6_e and GP130 and IL6RA  ) 
+  (  STAT3 and Proliferation and NFAT  ) 
+  (  STAT3 and Proliferation and NFAT  ) 
+ 1
+  (  ~IRF1 and Proliferation and GATA3 and ~FOXP3 and ~RUNX3 and NFAT  )  or  (  ~IRF1 and ~TBET and Proliferation and GATA3 and ~FOXP3 and NFAT  ) 
+  (  ~STAT5_2 and ~STAT5 and ~NFKB and ~FOXP3 and NFAT  )  or  (  ~STAT5_2 and ~STAT5 and ~TBET and ~FOXP3 and NFAT  )  or  (  ~STAT5_2 and ~STAT5 and ~TBET and NFKB  )  or  (  ~STAT6 and ~NFKB and ~FOXP3 and NFAT  )  or  (  ~STAT6 and ~TBET and ~FOXP3 and NFAT  )  or  (  ~STAT6 and ~TBET and NFKB  ) 
+  (  ~TCR  ) 
+ 1
+  (  APC  ) 

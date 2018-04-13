@@ -1,0 +1,2 @@
+CTLA4 *= ( TCR )
+TCR *= ( not CTLA4 )
