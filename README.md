@@ -5,9 +5,8 @@
 
 # README
 
-------------
 I)	THE METHOD
-------------
+--
 
 The method implemented in this Java library is the Stable Motif Control Algorithm, which is described in the following article: 
 
@@ -21,9 +20,8 @@ Jorge G. T. Zañudo and Réka Albert (2013).
 An effective network reduction approach to find the dynamical repertoire of discrete dynamic networks. 
 Chaos 23 (2), 025111. Focus Issue: Quantitative Approaches to Genetic Networks.
 
-------------
 II)	INSTRUCTIONS
-------------
+--
 
 To run the project, go to the command line, navigate to the folder where the "StableMotifs.jar" file and the "lib" folder are located. Once there type the command:
 
@@ -58,9 +56,8 @@ BOOLEAN FUNCTIONS
 
 For the Boolean functions use only the node names, the logical operators "and", "or", "not", and the parentheses symbols ")" and "(". In case the Boolean function is constant, use "0" or "1", depending on the constant state of the function. The logical function does not need to be written in a disjunctive normal form; the program will take the logical form in the TXT file and transform it into its disjunctive normal form using the Quine–McCluskey algorithm.
 
-------------
 III)	OUTPUT
-------------
+--
 
 The program will produce the following:
 
@@ -85,9 +82,8 @@ The stable motif control sets in the file ending with "StableMotifControlSets.tx
 
 As a note of caution, the stable motifs, control sets, and atttractors are obtained given a network, Boolean functions, and source node states. If any of them are changed then the system is changed, so it is possible that this changes the stable motifs, control sets, and atttractors. If the system is changed then one needs to recalculate the stable motifs, control sets, and atttractors for the modified system.
 
-------------
 IV)	EXAMPLE
-------------
+--
 
 As an example we include the TXT file "TLGLNetwork.txt", which contains the Boolean functions for the T-LGL leukemia Boolean network with the  input signals IL15=1 and Stimuli=1 (for more details, see the article referenced in the "THE METHOD" section). To run the program, go to the folder where the "StableMotifs.jar" file and the "lib" folder are located and type the command:
 
@@ -137,9 +133,8 @@ Looking at the stable motifs we find 7 stable motifs. The motif (PDGFR=0, S1P=0,
 
 Inspecting the stable motif control sets, we find 15 control sets to the three different attractors (Attractor0 denotes the apoptosis attractor, and  Attractor1/2 denote the leukemia attractors). The control set (PDGFR=0, Attractor0) implies that fixing PDGFR to the state 0 guarantees the system will converge to the apoptosis attractor. The same is true for the (S1P=0, Attractor0) and (SPHK1=0, Attractor0) control sets. These three control sets are obtained from the motif (PDGFR=0, S1P=0, SPHK1=0), which is uniquely associated to the apoptosis attractor. In a similar fashion, the control sets for the leukemic attractors (Attractor1 or Attractor2) are obtained from the motif Ceramide=0, PDGFR=1, S1P=1, SPHK1=1) associated to the leukemic attractor.
 
-------------
 V)	SOFTWARE USED AND LICENSES
-------------
+--
 
 JohnsonCycleAlgorithm
 
@@ -153,9 +148,8 @@ Quine-McCluskey_algorithm
 
 An implementation of the Quine-McCluskey_algorithm in the “Term.java” and “Formula.java” classes were retrieved in 2013 from http://en.literateprograms.org/Quine-McCluskey_algorithm_(Java)?action=history&offset=20110925122251. The “Term.java” and “Formula.java” classes are available under the MIT License.
 
-------------
 VI)	COPYRIGHT
-------------
+--
 
 The MIT License (MIT)
 
