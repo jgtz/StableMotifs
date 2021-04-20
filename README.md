@@ -1,6 +1,10 @@
-﻿========================
-README
-========================
+# UPDATE (April 20, 2021)
+
+- Newer Java versions (JRE/JDK >15) are incompatible with this software. We recommend using JRE/JDK 8.
+- This version is no longer being maintained. We recommend using the updated and much improved Python version: https://github.com/jcrozum/StableMotifs
+
+# README
+
 ------------
 I)	THE METHOD
 ------------
